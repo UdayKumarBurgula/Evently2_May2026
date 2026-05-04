@@ -20,3 +20,6 @@ My Project Sample 8.0
 14. Add EFCore.NamingConvention package in Events.Api projects and add code for using snake case naming convention in EventsDbContext.cs file
 15. Integrate Events module into API project - Add MapEventsModule() method in Program.cs and call it to register Events Module
 16. Add connection string in appsettings.json file and add code for using PostgreSQL database in EventsDbContext.cs file
+17. Add reference nugget package Microsoft.EntityFramework.Tools in Api project and add code for using EF Core tools in EventsDbContext.cs file
+18. Package Manager Console : Add-Migration Create_Database -Context EventsDbContext -o Database/Migrations
+	

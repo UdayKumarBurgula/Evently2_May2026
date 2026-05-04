@@ -1,9 +1,9 @@
 version: '3.9'
 
 services:
-  evently.api:
+  evently.api2:
     image: ${DOCKER_REGISTRY-}eventlyapi
-    container_name: Evently.api
+    container_name: Evently.api2
     build:
       context: .
       dockerfile: Evently.Api/Dockerfile
@@ -18,7 +18,5 @@ services:
         - POSTGRES_USER=eventlyuser
         - POSTGRES_PASSWORD=EventlyPassword123!
         - POSTGRES_DB=eventlydb
-    volumes:
-        - ./.containers/db:/var/lib/postgresql/data
     ports:
         - 5432:5432 

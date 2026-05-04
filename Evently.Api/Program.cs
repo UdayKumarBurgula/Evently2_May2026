@@ -1,3 +1,4 @@
+using Evently.Api.Extensions;
 using Events.Module.Events.Api;
 using MassTransit;
 
@@ -13,8 +14,15 @@ builder.Services.AddHealthChecks();
 
 WebApplication app = builder.Build();
 
-app.UseSwagger();
-app.UseSwaggerUI();
+
+if (app.Environment.IsDevelopment()) 
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+
+    app.ApplyMigrations();
+
+}
 
 app.MapHealthChecks("/health");
 
